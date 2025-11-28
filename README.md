@@ -102,6 +102,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5.  Open a Pull Request
 
 # Team Members
-- Fardina Tahsin (Front End)
+- Fardina Tahsin (Full Stack)
 - Sujit Mohajon (Full Stack)
 - Junaid Hossain (Backend)
