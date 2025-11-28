@@ -6,15 +6,15 @@
 
 ## ✨ Features
 
--   **🤖 AI Crop Health Scanner**: Instantly analyze crop photos to detect diseases (Fresh vs. Rotten) using advanced AI models.
--   **wx Weather & Risk Assessment**: Get real-time weather updates and automated risk alerts for your specific crops.
--   **📦 Batch Management**: Create, track, and manage multiple crop batches with ease.
--   **🔐 Secure Authentication**: Easy login via **Google** or **Phone (OTP)** using Firebase Authentication.
--   **🌍 Multilingual Support**: Fully localized for **English** and **Bengali (বাংলা)** speakers.
--   **📱 Responsive Design**: Optimized for both desktop and mobile devices.
--   **📚 Educational Resources**: Access farmer stories, research articles, and best practices.
+-   **AI Crop Health Scanner**: Instantly analyze crop photos to detect diseases (Fresh vs. Rotten) using advanced AI models.
+-   **Weather & Risk Assessment**: Get real-time weather updates and automated risk alerts for your specific crops.
+-   **Batch Management**: Create, track, and manage multiple crop batches with ease.
+-   **Secure Authentication**: Easy login via **Google** or **Phone (OTP)** using Firebase Authentication.
+-   **Multilingual Support**: Fully localized for **English** and **Bengali (বাংলা)** speakers.
+-   **Responsive Design**: Optimized for both desktop and mobile devices.
+-   **Educational Resources**: Access farmer stories, research articles, and best practices.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend**: HTML5, CSS3, JavaScript (ES6+ Modules)
 -   **Build Tool**: [Vite](https://vitejs.dev/)
@@ -22,7 +22,7 @@
 -   **Backend & Auth**: [Firebase](https://firebase.google.com/) (Authentication, Firestore)
 -   **AI/ML**: Roboflow / HuggingFace API integration
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up the project locally.
 
@@ -47,9 +47,11 @@ Follow these steps to set up the project locally.
 3.  **Configure Environment Variables**
     -   Create a `.env` file in the root directory.
     -   Copy the contents of `.env.template` into `.env`.
-    -   Fill in your Firebase configuration details:
+    -   Fill in your API configuration details:
+        
+        **Firebase Configuration:**
         ```env
-        VITE_FIREBASE_API_KEY=your_api_key
+        VITE_FIREBASE_API_KEY=your_firebase_api_key
         VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
         VITE_FIREBASE_PROJECT_ID=your_project_id
         VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
@@ -57,6 +59,37 @@ Follow these steps to set up the project locally.
         VITE_FIREBASE_APP_ID=your_app_id
         VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
         ```
+        
+        **Cloudinary Configuration (for image uploads):**
+        ```env
+        VITE_CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+        VITE_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
+        ```
+        
+        **HuggingFace API Configuration (for AI model):**
+        ```env
+        VITE_HF_API_URL=your_huggingface_api_url
+        VITE_HF_API_KEY=your_huggingface_api_key
+        ```
+        
+        **Weather API Configuration (OpenWeatherMap):**
+        ```env
+        VITE_WEATHER_BASE_URL=https://api.openweathermap.org/data/2.5/weather
+        VITE_WEATHER_API_KEY=your_weather_api_key
+        ```
+        
+        **Roboflow API Configuration (for crop disease detection):**
+        ```env
+        VITE_RF_API_URL=your_roboflow_api_url
+        VITE_RF_API_KEY=your_roboflow_api_key
+        ```
+    
+    > **Note:** You'll need to create accounts and obtain API keys from:
+    > - [Firebase](https://firebase.google.com/)
+    > - [Cloudinary](https://cloudinary.com/)
+    > - [HuggingFace](https://huggingface.co/)
+    > - [OpenWeatherMap](https://openweathermap.org/api)
+    > - [Roboflow](https://roboflow.com/)
 
 4.  **Run the development server**
     ```bash

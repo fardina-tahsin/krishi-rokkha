@@ -1,6 +1,8 @@
 // app.js
 import { app, auth, db, fbAuthApi, fbDbApi } from "./firebase-config.js";
 import { CLOUDINARY_CONFIG, HF_CONFIG } from "./config.js";
+import { initWeather } from "../modules/weather.js";
+import { initAiScanner } from "../modules/aiScan.js";
 
 const {
     onAuthStateChanged,
@@ -43,8 +45,12 @@ const logoutBtn = document.getElementById("logout-btn");
 const googleLoginBtn = document.getElementById("google-login-btn");
 
 const navDashboard = document.getElementById("nav-dashboard");
+const navWeather = document.getElementById("nav-weather");
+const navAiScanner = document.getElementById("nav-ai-scanner");
 const navProfile = document.getElementById("nav-profile");
 const dashboardView = document.getElementById("dashboard-view");
+const weatherView = document.getElementById("weather-view");
+const aiScannerView = document.getElementById("ai-scanner-view");
 const profileView = document.getElementById("profile-view");
 
 const batchForm = document.getElementById("batch-form");
@@ -524,11 +530,29 @@ onAuthStateChanged(auth, async (user) => {
 
 navDashboard.addEventListener("click", () => {
     dashboardView.classList.remove("hidden");
+    weatherView.classList.add("hidden");
+    aiScannerView.classList.add("hidden");
+    profileView.classList.add("hidden");
+});
+
+navWeather.addEventListener("click", () => {
+    dashboardView.classList.add("hidden");
+    weatherView.classList.remove("hidden");
+    aiScannerView.classList.add("hidden");
+    profileView.classList.add("hidden");
+});
+
+navAiScanner.addEventListener("click", () => {
+    dashboardView.classList.add("hidden");
+    weatherView.classList.add("hidden");
+    aiScannerView.classList.remove("hidden");
     profileView.classList.add("hidden");
 });
 
 navProfile.addEventListener("click", () => {
     dashboardView.classList.add("hidden");
+    weatherView.classList.add("hidden");
+    aiScannerView.classList.add("hidden");
     profileView.classList.remove("hidden");
 });
 
@@ -1284,4 +1308,6 @@ async function initUserData() {
     await loadProfile();
     await processQueue();
     runRiskDetection();
+    initWeather();
+    initAiScanner();
 }
