@@ -3,21 +3,22 @@ import { WEATHER_CONFIG } from "../src/config.js";
 
 // Expanded mapping of district/upazila -> coordinates
 const DISTRICT_COORDS = {
-    "Dhaka": { lat: 23.8103, lon: 90.4125 },
-    "Chattogram": { lat: 22.3569, lon: 91.7832 },
-    "Rajshahi": { lat: 24.3745, lon: 88.6042 },
-    "Khulna": { lat: 22.8456, lon: 89.5403 },
-    "Sylhet": { lat: 24.8949, lon: 91.8687 },
-    "Barisal": { lat: 22.7010, lon: 90.3535 },
-    "Rangpur": { lat: 25.7439, lon: 89.2752 },
-    "Mymensingh": { lat: 24.7471, lon: 90.4203 },
-    "Cumilla": { lat: 23.4607, lon: 91.1809 },
-    "Gazipur": { lat: 24.0023, lon: 90.4264 },
-    "Narayanganj": { lat: 23.6238, lon: 90.5000 },
-    "Bogura": { lat: 24.8481, lon: 89.3730 },
-    "Pabna": { lat: 24.0063, lon: 89.2372 },
-    "Jessore": { lat: 23.1634, lon: 89.2182 },
-    "Cox's Bazar": { lat: 21.4272, lon: 92.0058 }
+    // Chittagong Upazilas
+    "Anwara": { lat: 22.4167, lon: 91.7667 },
+    "Banshkhali": { lat: 22.3000, lon: 91.9833 },
+    "Boalkhali": { lat: 22.4667, lon: 91.8167 },
+    "Chandanaish": { lat: 22.4667, lon: 91.9833 },
+    "Fatikchhari": { lat: 22.6667, lon: 91.8000 },
+    "Hathazari": { lat: 22.5000, lon: 91.8000 },
+    "Lohagara": { lat: 22.4167, lon: 91.9167 },
+    "Mirsharai": { lat: 22.7500, lon: 91.6167 },
+    "Patiya": { lat: 22.3000, lon: 91.9667 },
+    "Rangunia": { lat: 22.5833, lon: 91.9167 },
+    "Raozan": { lat: 22.5333, lon: 91.8667 },
+    "Sandwip": { lat: 22.5167, lon: 91.4500 },
+    "Satkania": { lat: 22.1000, lon: 92.0500 },
+    "Sitakunda": { lat: 22.6333, lon: 91.6667 },
+    "Chattogram Sadar": { lat: 22.3569, lon: 91.7832 }
 };
 
 export function initWeather() {
