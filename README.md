@@ -21,6 +21,7 @@
 -   **Build Tool**: [Vite](https://vitejs.dev/)
 -   **3D Visuals**: [Three.js](https://threejs.org/) (for immersive welcome animations)
 -   **Backend & Auth**: [Firebase](https://firebase.google.com/) (Authentication, Firestore)
+-   **Image Management**: [Cloudinary](https://cloudinary.com/)
 -   **AI/ML**: Roboflow / HuggingFace API integration
 
 ## 🚀 Getting Started
