@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HarvestGuard</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <!-- Firebase SDKs -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <section id="auth-section">
+      <!-- LOGIN CARD (default visible) -->
+      <div id="login-card" class="card">
+        <div class="card-header">
+          <h2>Login</h2>
+          <h4><a href="/">Back to home page</a></h4>
+        </div>
+        <form id="login-form">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
