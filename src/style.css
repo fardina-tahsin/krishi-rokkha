@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
+    background: linear-gradient(135deg, #f6ad55 0%, #b7803d 100%);
     color: white;
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
@@ -99,7 +99,7 @@ form button {
 #analytics>div:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
-    border-color: rgba(47, 133, 90, 0.3);
+    border-color: #c6893e;
 }
 
 #analytics>div span:first-child {
@@ -116,7 +116,7 @@ form button {
     display: block;
     font-size: 2rem;
     font-weight: 800;
-    color: #2f855a;
+    color: #f6ad55;
     line-height: 1;
 }
 
@@ -154,7 +154,7 @@ form button {
 .batch-card .complete-btn {
     margin-top: 1rem;
     padding: 0.7rem 1.2rem;
-    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
+    background: linear-gradient(135deg, #f6ad55 0%, #ad7a3b 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -167,7 +167,7 @@ form button {
 .batch-card .complete-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(47, 133, 90, 0.3);
-    background: linear-gradient(135deg, #22543d 0%, #1a3d2e 100%);
+    background: linear-gradient(135deg, #c9924e 0%, #98682e 100%);
 }
 
 .alert-card {
@@ -192,12 +192,12 @@ form button {
 }
 
 .alert-card .mitigate-btn {
-    background: #48bb78;
+    background: #f6ad55;
     color: white;
 }
 
 .alert-card .mitigate-btn:hover {
-    background: #38a169;
+    background: #f6ad55;
     transform: translateY(-1px);
 }
 
@@ -239,7 +239,7 @@ form button {
 }
 
 .status-active {
-    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    background: linear-gradient(135deg, #f6ad55 0%, #f6ad55 100%);
     color: white;
     box-shadow: 0 2px 4px rgba(72, 187, 120, 0.3);
 }
@@ -417,12 +417,12 @@ form button {
 }
 
 .btn-primary {
-    background: #2f855a;
+    background: #f6ad55;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #22543d;
+    background: #a7712f;
 }
 
 .btn-dark {
@@ -461,7 +461,7 @@ form button {
 }
 
 .card-header a {
-    color: #2f855a;
+    color: #f6ad55;
     text-decoration: none;
     font-weight: 600;
 }

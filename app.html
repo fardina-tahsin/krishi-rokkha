@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <title>KrishiRokkha</title>
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+
     <!-- Firebase SDKs -->
     <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"></script>
@@ -161,7 +163,7 @@
                         <option value="" data-i18n="selectOptionDefault">-- নির্বাচন করুন --</option>
                         <!-- Options will be populated by JS -->
                     </select>
-                    <button onclick="window.open('/A4.html', '_blank')" style="margin-left: 10px; padding: 5px 10px; background: #2f855a; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    <button onclick="window.open('/A4.html', '_blank')" style="margin-left: 10px; padding: 5px 10px; background: #f6ad55; color: white; border: none; border-radius: 4px; cursor: pointer;">
                         Open Risk Predictor Tool
                     </button>
                 </div>
@@ -175,150 +177,7 @@
             <!-- AI Scanner -->
             <section id="ai-scanner-view" class="hidden">
                 <style>
-                    /* Premium UI for AI Scanner */
-                    .scanner-card {
-                        background: #ffffff;
-                        border-radius: 24px;
-                        padding: 2.5rem 2rem;
-                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-                        max-width: 480px;
-                        margin: 2rem auto;
-                        text-align: center;
-                        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-                        border: 1px solid rgba(0, 0, 0, 0.02);
-                    }
 
-                    .scanner-header h2 {
-                        color: #1a4731;
-                        margin: 0 0 0.5rem 0;
-                        font-size: 2rem;
-                        font-weight: 800;
-                        letter-spacing: -0.5px;
-                    }
-
-                    .scanner-header p {
-                        color: #718096;
-                        margin: 0 0 2.5rem 0;
-                        font-size: 1rem;
-                        line-height: 1.5;
-                    }
-
-                    .upload-box {
-                        border: 2px dashed #cbd5e0;
-                        border-radius: 20px;
-                        padding: 3rem 1.5rem;
-                        position: relative;
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                        background: #f8fafc;
-                        margin-bottom: 2rem;
-                        cursor: pointer;
-                        overflow: hidden;
-                    }
-
-                    .upload-box:hover {
-                        border-color: #2f855a;
-                        background: #f0fff4;
-                        transform: translateY(-2px);
-                    }
-
-                    .upload-box input[type="file"] {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        cursor: pointer;
-                        z-index: 10;
-                    }
-
-                    .upload-content {
-                        pointer-events: none;
-                    }
-
-                    .upload-icon {
-                        font-size: 3.5rem;
-                        margin-bottom: 1rem;
-                        display: block;
-                        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-                    }
-
-                    .upload-label {
-                        color: #2d3748;
-                        font-weight: 700;
-                        font-size: 1.1rem;
-                        display: block;
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .upload-sublabel {
-                        color: #a0aec0;
-                        font-size: 0.9rem;
-                        display: block;
-                    }
-
-                    #ai-scan-button {
-                        background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
-                        color: white;
-                        border: none;
-                        padding: 1.2rem;
-                        width: 100%;
-                        border-radius: 16px;
-                        font-size: 1.1rem;
-                        font-weight: 700;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        box-shadow: 0 10px 20px rgba(47, 133, 90, 0.2);
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                    }
-
-                    #ai-scan-button:hover {
-                        transform: translateY(-3px);
-                        box-shadow: 0 15px 30px rgba(47, 133, 90, 0.3);
-                    }
-
-                    #ai-scan-button:active {
-                        transform: translateY(-1px);
-                    }
-
-                    #ai-scan-status {
-                        margin-top: 1.5rem;
-                        font-size: 1rem;
-                        min-height: 1.5em;
-                        font-weight: 500;
-                        color: #4a5568;
-                    }
-
-                    #ai-scan-preview {
-                        width: 100%;
-                        max-height: 350px;
-                        object-fit: contain;
-                        border-radius: 16px;
-                        margin-top: 2rem;
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-                        display: block;
-                        background: #fff;
-                    }
-
-                    /* Ensure hidden class still works with high specificity */
-                    #ai-scan-preview.hidden {
-                        display: none !important;
-                    }
-
-                    #ai-scan-result {
-                        margin-top: 2rem;
-                        padding: 1.5rem;
-                        border-radius: 16px;
-                        background: #fff;
-                        transition: all 0.3s ease;
-                    }
-
-                    #ai-scan-result:not(:empty) {
-                        background: #f7fafc;
-                        border: 1px solid #e2e8f0;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-                    }
                 </style>
 
                 <div class="scanner-card">
