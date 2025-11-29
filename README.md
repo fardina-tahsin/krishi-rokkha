@@ -123,10 +123,65 @@ krishi-rokkha/
 └── package.json            # Dependencies and scripts
 ```
 
+## 🏆 Onsite Challenges 
 
+These tasks were implemented during the onsite session to simulate real-world decision-making, interactivity, and accessibility for farmers.
 
+## Local Risk Landscape Visualization
 
-# Team Members
+  - Description: Establishes a Local Risk Map to promote community awareness of spoilage threats.
+
+  - Features:
+
+    - Responsive map (Leaflet.js) centered on the farmer’s district.
+
+    - Mock neighbor data: 10–15 anonymous farms with coordinates and risk levels (Low/Medium/High).
+
+  - Pin Visualization:
+
+       - Farmer’s own location → blue pin
+        
+       -  Neighbor locations → color-coded markers (Green = Low, Yellow = Medium, Red = High)
+         
+       - Bangla pop-ups showing General Crop Type, Current Risk Level, and Last Update Time (mocked).
+        
+       - Touch-friendly interactivity: panning and zooming.
+        
+       - Privacy: All neighbor data completely anonymous.
+
+## Smart Alert System (Decision Engine)
+
+  - Description: Generates specific actionable advice in Bangla based on crop type, weather, and risk levels.
+
+  - Features:
+
+       - Bad alert example: “Weather is bad.”
+
+       - Good alert example: “আগামীকাল বৃষ্টি় হবে এবং আপনার আলুর গুদামে আর্দ্রতা বেশি। এখনই ফ্যান চালু করুন।”
+
+       - Critical risk triggers a simulated SMS notification in the browser console.
+
+## Bangla Voice/Touchless Interface
+
+  - Description: Farmers can ask questions in spoken Bangla and get spoken answers.
+
+  - Features:
+
+       - Uses Web Speech API for recognition + synthesis (language: bn-BD).
+
+       - Supports 4–5 common questions:
+
+            - “আজকে র আবহাওয়া?”
+            
+            - “আমার ধানে র অবস্থা?”
+            
+            - “গুদামে কী করব?”
+            
+            - “কবে কাটব?”
+
+  - Spoken answers generated dynamically based on mock data.
+  
+## Team Members
 - Fardina Tahsin (Full Stack)
 - Sujit Mohajon (Full Stack)
 - Junaid Hossain (Backend)
