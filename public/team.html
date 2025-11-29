@@ -6,6 +6,8 @@
 
     <!-- Shared Theme -->
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header_footer.css">
+    
 
     <!-- Language Handler -->
     <script defer src="./js/lang.js"></script>
@@ -13,18 +15,23 @@
 
 <body>
 
-<div class="container">
+<div class="page">
+
 
     <!-- Header -->
-    <header>
-        <div class="brand">
-            <div class="logo">KR</div>
-            <h1 data-lang="team_header">Meet Our Team</h1>
-        </div>
-
-        <div class="lang-toggle">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('bn')">বাংলা</button>
+    <header class="nav">
+        <a href="/welcome.html" class="nav-logo"
+            style="text-decoration: none; color: inherit; cursor: pointer;">KrishiRokkha</a>
+        <nav class="nav-links">
+            <a href="/about.html" data-i18n="nav-features">About Us</a>
+            <a href="/farmer_stories.html" data-i18n="nav-impact">Testimonies</a>
+            <a href="/our_research.html" data-i18n="nav-about">Research</a>
+        </nav>
+        <div class="nav-buttons">
+            <button id="lang-toggle" class="nav-cta">
+                <span id="lang-text">বাংলা</span>
+            </button>
+            <button id="enter-app-btn" class="nav-cta" data-i18n="nav-enter">Enter App</button>
         </div>
     </header>
 
@@ -35,13 +42,15 @@
             We are a passionate group of innovators working to create an impact in the agricultural sector of Bangladesh.
         </p>
 
+      <div class="container">
+
         <!-- Team Cards Grid -->
         <div class="grid team-grid">
 
             <div class="card team-card">
                 <img src="..\images\member 1.jpg" alt="Member 1">
                 <h3 data-lang="member1_name">Fardina Tahsin</h3>
-                <p data-lang="member1_role">Role - Frontend Developer 
+                <p data-lang="member1_role">Role - Full Stack Developer 
                 </br> CSE undergraduate at East Delta University
   
                 </p>
@@ -60,21 +69,46 @@
             <div class="card team-card">
                 <img src="..\images\member 3.jpg" alt="Member 3">
                 <h3 data-lang="member3_name">Sujit Mohajan</h3>
-                <p data-lang="member3_role">Role - Backend Developer
+                <p data-lang="member3_role">Role - Full Stack Developer
                 </br> CSE undergraduate at East Delta University 
                 </p>
             </div>
 
         </div>
+      </div>
     </section>
+    
 
-    <footer>
-        <div class="footer-bottom">
-            © 2025 KrishiRokkha — All rights reserved.
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="footer-brand">
+            <div class="nav-logo" style="margin-bottom:10px;">KrishiRokkha</div>
+            <p data-i18n="footer-desc">Empowering Bangladeshi farmers to reduce post-harvest losses and build a more
+                resilient, sustainable food system.</p>
+        </div>
+        <div class="footer-columns">
+            <div>
+                <p class="footer-heading" data-i18n="footer-about-title">About KrishiRokkha</p>
+                <div class="footer-list">
+                    <a href="#" data-i18n="footer-mission">Our Mission</a>
+                    <a href="#" data-i18n="footer-sdg">SDG Impact</a>
+                    <a href="#" data-i18n="footer-team">Team</a>
+                </div>
+            </div>
+            <div>
+                <p class="footer-heading" data-i18n="footer-resources-title">Resources</p>
+                <div class="footer-list">
+                    <a href="#" data-i18n="footer-guide">User Guide</a>
+                    <a href="#" data-i18n="footer-research">Research & Data</a>
+                    <a href="#" data-i18n="footer-stories">Farmer Stories</a>
+                </div>
+            </div>
         </div>
     </footer>
 
 </div>
+</div>
+
 
 </body>
 </html>
