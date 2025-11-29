@@ -22,9 +22,31 @@
         .lang-toggle { margin: 10px 0; }
         .lang-btn { padding: 6px 12px; margin: 0 3px; border: 1px solid #ddd; background: #f8f9fa; cursor: pointer; }
         .lang-btn.active { background: #007bff; color: white; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #007bff; color: white; }
+        .nav-logo { font-size: 1.5em; font-weight: bold; }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { color: white; text-decoration: none; }
+        .nav-buttons { display: flex; gap: 10px; }
+        .nav-cta { padding: 8px 16px; border: none; border-radius: 4px; background: #ffc107; color: #333; cursor: pointer; }
+        .nav-cta:hover { background: #e0a800; }
     </style>
 </head>
 <body>
+    <header class="nav">
+        <a href="/welcome.html" class="nav-logo" style="text-decoration: none; color: inherit; cursor: pointer;">KrishiRokkha</a>
+        <nav class="nav-links">
+            <a href="/about.html" data-i18n="nav-features">About Us</a>
+            <a href="/farmer_stories.html" data-i18n="nav-impact">Testimonies</a>
+            <a href="/our_research.html" data-i18n="nav-about">Research</a>
+        </nav>
+        <div class="nav-buttons">
+            <button id="lang-toggle" class="nav-cta">
+                <span id="lang-text">বাংলা</span>
+            </button>
+            <button id="enter-app-btn" class="nav-cta" data-i18n="nav-enter">Enter App</button>
+        </div>
+    </header>
+
     <h1>বাংলা ভয়েস ইন্টারফেস</h1>
     <p class="lead">আপনার প্রশ্ন জিজ্ঞাসা করুন — স্পর্শ ছাড়াই কথা বলুন বা নিচে টাইপ করে জিজ্ঞাসা করুন।</p>
     
@@ -63,6 +85,10 @@
         </div>
     </div>
 
+    <button class="btn" onclick="window.open('/aiScan.html', '_blank')" style="margin-top: 10px; padding: 10px 18px; background: #f6ad55; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        AI Scan Interface
+    </button>
+
     <script>
         // Current language (default: Bangla)
         let currentLang = 'bn';
@@ -72,7 +98,7 @@
             bn: [
             {answers: ["আজকের আবহাওয়া কেমন?","আজকের আবহাওয়া","আবহাওয়া"], reply: "আজকের আবহাওয়া আংশিক মেঘলা থাকতে পারে; বৃষ্টি হলে খেতে কাজ বন্ধ রাখুন এবং জল নিষ্কাশনের ব্যবস্থা করুন।"},
             {answers: ["আমার ধানের অবস্থা","ধানের অবস্থা","আমার ফসল"], reply: "আমার মূল্যায়ন অনুযায়ী ধানের অবস্থা ভালো। পাতায় হলদেটে দাগ বা পোকার আক্রমণ থাকলে নিকটস্থ কৃষি অফিসে যোগাযোগ করুন।"},
-            {answers: ["গুদামে কী করব","গুদাম সংরক্ষণ","শস্য সংরক্ষণ"], reply: "গুদামে ঢেকে এবং শুষ্ক পরিবেশে রাখুন। পচা হওয়া অংশ আলাদা করে রাখুন, এবং নিয়মিত আর্দ্রতা চেক করুন।"},
+            {answers: ["গুদামে কী করব","গুদাম সংরক্ষণ","শস্য সংরক্ষণ"], reply: "গুদাম ঢেকে এবং শুষ্ক পরিবেশে রাখুন। পচা হওয়া অংশ আলাদা করে রাখুন, এবং নিয়মিত আর্দ্রতা চেক করুন।"},
             {answers: ["কবে কাটব","কাটা কবে","কখন কাটব"], reply: "ধান সাধারণত দানা শক্ত হলে ও আর্দ্রতা কমে ২০% থেকে ২৫% হলে কাটা ভালো। আপনার ধানের নমুনা দেখে নিশ্চিত হওয়া ভালো।"},
             {answers: ["জমির খবর","মাঠের অবস্থা","জমি কেমন"], reply: "মাটির আর্দ্রতা এবং পুষ্টি সম্যক আছে। যদি পুষ্টি বাড়াতে চান, তাতে ঝুলে পড়ুন—উপযুক্ত সার ব্যবহার করুন।"},
             {answers: ["পোকার সমস্যা","পোকা","জারা"], reply: "পোকার লক্ষণ দেখা গেলে প্রথমে মেকানিক্যাল নিয়ন্ত্রণ করুন (পোকা সরান), প্রয়োজনে সঠিক কীটনাশক ব্যবহার করুন — নিশ্চিত হন নাম ও মেশানোর অনুপাত জানতে।"},
