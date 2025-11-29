@@ -124,11 +124,10 @@ krishi-rokkha/
 ```
 
 ## 🏆 Onsite Challenges 
-🏆 Onsite Challenges (PART B)
 
 These tasks were implemented during the onsite session to simulate real-world decision-making, interactivity, and accessibility for farmers.
 
-# Local Risk Landscape Visualization
+## Local Risk Landscape Visualization
 
   - Description: Establishes a Local Risk Map to promote community awareness of spoilage threats.
 
@@ -150,7 +149,7 @@ These tasks were implemented during the onsite session to simulate real-world de
         
        - Privacy: All neighbor data completely anonymous.
 
-# Smart Alert System (Decision Engine)
+## Smart Alert System (Decision Engine)
 
   - Description: Generates specific actionable advice in Bangla based on crop type, weather, and risk levels.
 
@@ -162,7 +161,7 @@ These tasks were implemented during the onsite session to simulate real-world de
 
        - Critical risk triggers a simulated SMS notification in the browser console.
 
-# Bangla Voice/Touchless Interface
+## Bangla Voice/Touchless Interface
 
   - Description: Farmers can ask questions in spoken Bangla and get spoken answers.
 
@@ -182,7 +181,7 @@ These tasks were implemented during the onsite session to simulate real-world de
 
   - Spoken answers generated dynamically based on mock data.
   
-# Team Members
+## Team Members
 - Fardina Tahsin (Full Stack)
 - Sujit Mohajon (Full Stack)
 - Junaid Hossain (Backend)
