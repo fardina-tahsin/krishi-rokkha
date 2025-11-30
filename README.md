@@ -74,7 +74,7 @@ Follow these steps to set up the project locally.
         
         **Weather API Configuration (OpenWeatherMap):**
         ```env
-        VITE_WEATHER_BASE_URL=https://api.openweathermap.org/data/2.5/weather
+        VITE_WEATHER_BASE_URL=your_weather_api_url
         VITE_WEATHER_API_KEY=your_weather_api_key
         ```
         
@@ -82,6 +82,17 @@ Follow these steps to set up the project locally.
         ```env
         VITE_RF_API_URL=your_roboflow_api_url
         VITE_RF_API_KEY=your_roboflow_api_key
+        ```
+        
+        **Smart Alert API Configuration (use OpenWeatherMap):**
+        ```env
+        VITE_SMART_AI_API_URL=your_smart_alert_api_url
+        VITE_SMART_AI_API_KEY=your_smart_alert_api_key
+        ```
+
+        **Google API Configuration:**
+        ```env
+        VITE_GOOGLE_AI_API_KEY=your_google_api_key
         ```
     
     > **Note:** You'll need to create accounts and obtain API keys from:
