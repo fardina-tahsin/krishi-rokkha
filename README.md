@@ -74,7 +74,7 @@ Follow these steps to set up the project locally.
         
         **Weather API Configuration (OpenWeatherMap):**
         ```env
-        VITE_WEATHER_BASE_URL=https://api.openweathermap.org/data/2.5/weather
+        VITE_WEATHER_BASE_URL=your_weather_api_url
         VITE_WEATHER_API_KEY=your_weather_api_key
         ```
         
