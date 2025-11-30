@@ -35,7 +35,7 @@ Follow these steps to set up the project locally.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/junaid-h0ssain/krishi-rokkha.git
+    git clone https://github.com/fardina-tahsin/krishi-rokkha.git
     cd krishi-rokkha
     ```
 
@@ -82,6 +82,17 @@ Follow these steps to set up the project locally.
         ```env
         VITE_RF_API_URL=your_roboflow_api_url
         VITE_RF_API_KEY=your_roboflow_api_key
+        ```
+
+        **Smart Alert API Configuration (use OpenWeatherMap):**
+        ```env
+        VITE_SMART_AI_API_URL=your_smart_alert_api_url
+        VITE_SMART_AI_API_KEY=your_smart_alert_api_key
+        ```
+
+        **Google API Configuration:**
+        ```env
+        VITE_GOOGLE_AI_API_KEY=your_google_api_key
         ```
     
     > **Note:** You'll need to create accounts and obtain API keys from:
